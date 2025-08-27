@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo" data-aos="fade-down" data-aos-duration="1000">Portfolio</a>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Home</a></li>
+                    <li><a href="#about" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">About</a></li>
+                    <li><a href="#skills" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">Skills</a></li>
+                    <li><a href="#testimony" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Testimony</a></li>
+                    <li><a href="#contact" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Contact</a></li>
+                    <li>
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="home-content">
+                <h1 data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span>Yusuf</span></h1>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Saya adalah seorang Software Developer dengan pengalaman lebih dari 5 tahun. Saya berspesialisasi dalam membuat website yang indah dan fungsional.</p>
+                <a href="#contact" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Contact me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>About me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="assets/src/Photo SYBAU.jpg" alt="Yusuf">
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h3>Web Developer & Software Developer</h3>
+                    <p>Saya adalah seorang manusia yang memiliki passion dalam mengembangkan suatu aplikasi maaupun website dan juga memiliki pengalaman dalam merancang desaign sebuah website.</p>
+                    <p>Sejak memulai karir saya di industri ini, saya telah bekerja dengan berbagai klien dari startup hingga perusahaan besar, membantu mereka mewujudkan visi digital mereka.</p>
+                    <p>Saya selalu bersemangat untuk mempelajari teknologi dan tren desain terbaru, memastikan bahwa karya saya selalu segar dan relevan dengan perkembangan zaman. Src = ChatGPT</p>
+                    <a href="#contact" class="btn">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript.</p>
+                </div>
+                <div class="skill" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <i class="fas fa-database"></i>
+                    <h3>Backend Development</h3>
+                    <p>PHP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimony Section -->
+    <section id="testimony">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Testimoni Klien</h2>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="testimonial-text">
+                        "Dia adalah web developer yang sangat berbakat. Dia memberikan hasil yang terbaik dan selalu tepat waktu."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Jane Smith">
+                        <div class="author-details">
+                            <h4>Jumaedah</h4>
+                            <p>CEO Startup XYZ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="testimonial-text">
+                        "Bekerja dengan dia adalah pengalaman yang menyenangkan. Dia sangat professional dan mengerti kebutuhan klien."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Michael Johnson">
+                        <div class="author-details">
+                            <h4>Mikail</h4>
+                            <p>Marketing Director ABC Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="testimonial-text">
+                        "Desain website yang dibuat dia sangat mengagumkan dan meningkatkan conversion rate kami secara signifikan."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Robert Brown">
+                        <div class="author-details">
+                            <h4>Roberybob</h4>
+                            <p>Founder Digital Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Contact me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+                    <h3>Contact information</h3>
+                    <p>Silakan hubungi saya melalui informasi di bawah ini atau isi form disamping.</p>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Sudirman No. 123, Jakarta, Indonesia</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 123 456 7890</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yusufidn197@gmail.com</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>http://127.0.0.1:5500/index.html</span>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.facebook.com/profile.php?id=61579628405236"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ZelikeCoco"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/zaenthh/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/yusuf-idn-36714a37a/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JosephGokss"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" placeholder="Masukkan subjek pesan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" placeholder="Tulis pesan Anda di sini" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61579628405236" data-aos="zoom-in" data-aos-duration="1000"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/ZelikeCoco" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/zaenthh/" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/yusuf-idn-36714a37a/" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/JosephGokss" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="copyright" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">&copy; 2023 Yusuf Al Fatih. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menambahkan JavaScript AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+        
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would normally handle form submission to a server
+                alert('Terima kasih! Pesan Anda telah dikirim.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
