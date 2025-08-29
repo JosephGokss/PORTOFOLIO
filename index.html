@@ -3,102 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/CSS/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+    <title>YOU's </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#7e22ce',
+                        light: '#f8fafc'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #7e22ce, 0 0 10px #7e22ce, 0 0 15px #7e22ce' },
+                            '100%': { boxShadow: '0 0 10px #7e22ce, 0 0 20px #7e22ce, 0 0 30px #7e22ce' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#home" class="logo" data-aos="fade-down" data-aos-duration="1000">Portfolio</a>
-                
-                <div class="menu-toggle" id="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-                <ul class="nav-links">
-                    <li><a href="#home" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Home</a></li>
-                    <li><a href="#about" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">About</a></li>
-                    <li><a href="#skills" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">Skills</a></li>
-                    <li><a href="#testimony" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Testimony</a></li>
-                    <li><a href="#contact" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Contact</a></li>
-                    <li>
-                        <label class="theme-switch">
-                            <input type="checkbox" id="theme-toggle">
-                            <span class="slider">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                            </span>
-                        </label>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="antialiased">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="container">
-            <div class="home-content">
-                <h1 data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span>Yusuf</span></h1>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Saya adalah seorang Software Developer dengan pengalaman lebih dari 5 tahun. Saya berspesialisasi dalam membuat website yang indah dan fungsional.</p>
-                <a href="#contact" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Contact me</a>
-            </div>
-        </div>
-    </section>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                <h2>About me</h2>
+    <div class="content">
+        <!-- Navigation -->
+        <nav class="glass fixed w-full z-50 py-4 px-8 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-border px-4 py-2">
+                <span class="glitch" data-text="Portof">Portof</span>
             </div>
-            <div class="about-content">
-                <div class="about-img" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="assets/src/Photo SYBAU.jpg" alt="Yusuf">
-                </div>
-                <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <h3>Web Developer & Software Developer</h3>
-                    <p>Saya adalah seorang manusia yang memiliki passion dalam mengembangkan suatu aplikasi maaupun website dan juga memiliki pengalaman dalam merancang desaign sebuah website.</p>
-                    <p>Sejak memulai karir saya di industri ini, saya telah bekerja dengan berbagai klien dari startup hingga perusahaan besar, membantu mereka mewujudkan visi digital mereka.</p>
-                    <p>Saya selalu bersemangat untuk mempelajari teknologi dan tren desain terbaru, memastikan bahwa karya saya selalu segar dan relevan dengan perkembangan zaman. Src = ChatGPT</p>
-                    <a href="#contact" class="btn">Contact me</a>
-                </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-accent transition-colors duration-300">Home</a>
+                <a href="#about" class="hover:text-accent transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-accent transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-accent transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a>
             </div>
-        </div>
-    </section>
+            <div class="md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                <h2>Skills</h2>
-            </div>
-            <div class="skills-container">
-                <div class="skill" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript.</p>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative px-4 pt-24">
+            <div class="text-center z-10 max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="glitch" data-text="Hello, I'm Yusu'f">Hello, I'm Yusu'f</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-300">
+                    A <span class="text-accent font-semibold">Full Stack Developer</span> & <span class="text-accent font-semibold">UI/UX Designer</span> with passion for creating interactive and responsive web applications.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <button class="px-8 py-3 bg-accent rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 gradient-border">
+                        View My Work
+                    </button>
+                    <!-- <button class="px-8 py-3 glass rounded-lg font-semibold hover:bg-secondary transition-colors duration-300">
+                        Download CV
+                    </button> -->
                 </div>
-                <div class="skill" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <i class="fas fa-database"></i>
-                    <h3>Backend Development</h3>
-                    <p>PHP.</p>
-                </div>
             </div>
-        </div>
-    </section>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#about">
+                    <i class="fas fa-chevron-down text-3xl text-accent"></i>
+                </a>
+            </div>
+        </section>
 
-    <!-- Testimony Section -->
-    <section id="testimony">
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="glitch" data-text="About Me">About Me</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 mx-auto gradient-border rounded-full flex items-center justify-center">
+                            <div class="w-72 h-72 bg-secondary rounded-full overflow-hidden">
+                                <img src="assets/src/Po.jpg" 
+                                     alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 w-32 h-32 border-t-4 border-l-4 border-accent rounded-tl-3xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 border-b-4 border-r-4 border-accent rounded-br-3xl"></div>
+                    </div>
+                    <div class="glass p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-4">Crafting Digital Experiences</h3>
+                        <p class="text-gray-300 mb-6">
+                            I'm a passionate developer and designer with over 5 years of experience in creating 
+                            visually stunning and highly functional web applications. My expertise spans across 
+                            frontend and backend development, UI/UX design, and cloud infrastructure.
+                        </p>
+                        <p class="text-gray-300 mb-6">
+                            I specialize in modern JavaScript frameworks, responsive design, and creating 
+                            intuitive user experiences. My goal is to bridge the gap between design and 
+                            technology to create seamless digital experiences.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="flex items-center">
+                                <div class="mr-3 text-accent">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>Frontend Development</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-3 text-accent">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>UI/UX Design</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-3 text-accent">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>Backend Development</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-3 text-accent">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>DevOps & Cloud</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 md:px-8 bg-secondary">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="glitch" data-text="My Skills">My Skills</span>
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Skill Items -->
+                    <div class="glass p-6 rounded-2xl text-center card-3d">
+                        <div class="text-5xl text-accent mb-4">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">HTML/CSS</h3>
+                        <div class="w-full bg-primary rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center card-3d">
+                        <div class="text-5xl text-accent mb-4">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                        <div class="w-full bg-primary rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center card-3d">
+                        <div class="text-5xl text-accent mb-4">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">React</h3>
+                        <div class="w-full bg-primary rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center card-3d">
+                        <div class="text-5xl text-accent mb-4">
+                            <i class="fab fa-node"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+                        <div class="w-full bg-primary rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="glitch" data-text="My Projects">My Projects</span>
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Items -->
+                    <div class="glass rounded-2xl overflow-hidden card-3d">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                            <p class="text-gray-300 mb-4">A full-featured online shopping platform with payment integration and admin dashboard.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl overflow-hidden card-3d">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                                 alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                            <p class="text-gray-300 mb-4">A collaborative project management tool with real-time updates and team collaboration features.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">Vue.js</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">Firebase</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl overflow-hidden card-3d">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">IDN Teaching</h3>
+                            <p class="text-gray-300 mb-4">A comprehensive fitness application with workout planning, nutrition tracking, and progress analytics.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">React Native</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">GraphQL</span>
+                                <span class="px-3 py-1 bg-accent rounded-full text-sm">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimony section -->
+         <section id="testimony">
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Testimoni Klien</h2>
@@ -143,165 +297,159 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                <h2>Contact me</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
-                    <h3>Contact information</h3>
-                    <p>Silakan hubungi saya melalui informasi di bawah ini atau isi form disamping.</p>
-                    <div class="contact-info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Jl. Sudirman No. 123, Jakarta, Indonesia</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+62 123 456 7890</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>yusufidn197@gmail.com</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-globe"></i>
-                        <span>http://127.0.0.1:5500/index.html</span>
-                    </div>
-                    <div class="contact-social">
-                        <a href="https://www.facebook.com/profile.php?id=61579628405236"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/ZelikeCoco"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/zaenthh/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/yusuf-idn-36714a37a/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/JosephGokss"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" placeholder="Masukkan nama lengkap Anda" required>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 md:px-8 bg-secondary">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="glitch" data-text="Get In Touch">Get In Touch</span>
+                </h2>
+                <div class="glass p-8 rounded-2xl">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Subjek</label>
-                            <input type="text" id="subject" placeholder="Masukkan subjek pesan" required>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-primary border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" placeholder="Tulis pesan Anda di sini" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Kirim Pesan</button>
+                        <button type="submit" class="w-full py-3 bg-accent rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 gradient-border">
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61579628405236" data-aos="zoom-in" data-aos-duration="1000"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/ZelikeCoco" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/zaenthh/" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/yusuf-idn-36714a37a/" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/JosephGokss" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400"><i class="fab fa-github"></i></a>
+        <!-- Footer -->
+        <footer class="py-12 px-4 md:px-8 text-center">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-2xl text-gray-400 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-400 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-400 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-400 hover:text-accent transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-                <p class="copyright" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">&copy; 2023 Yusuf Al Fatih. All Rights Reserved.</p>
+                <p class="text-gray-400">© 2023 Yusuf. All rights reserved.</p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <!-- Menambahkan JavaScript AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Inisialisasi AOS
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-
-        // Mobile menu toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenu.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#7e22ce" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#7e22ce",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "grab" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 140, line_linked: { opacity: 1 } },
+                        push: { particles_nb: 4 }
+                    }
+                },
+                retina_detect: true
+            });
+            
+            // Custom cursor
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            document.addEventListener('mousemove', function(e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
                 
-                // Close mobile menu if open
-                navLinks.classList.remove('active');
-                mobileMenu.classList.remove('active');
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
                 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+                cursorOutline.style.left = `${posX}px`;
+                cursorOutline.style.top = `${posY}px`;
                 
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+            });
+            
+            // Add hover effect to links and buttons
+            const links = document.querySelectorAll('a, button');
+            
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                });
+                
+                link.addEventListener('mouseleave', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+            });
+            
+            // Scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-float');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.card-3d').forEach(card => {
+                observer.observe(card);
             });
         });
-
-        // Header background change on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.9)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Dark mode toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        
-        // Check for saved theme preference
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.checked = true;
-        }
-        
-        themeToggle.addEventListener('change', function() {
-            if (this.checked) {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Here you would normally handle form submission to a server
-                alert('Terima kasih! Pesan Anda telah dikirim.');
-                contactForm.reset();
-            });
-        }
     </script>
 </body>
 </html>
