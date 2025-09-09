@@ -573,6 +573,11 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: 0.1s linear;
+        }
+
+        .testimonial-card:hover{
+            scale: 1.1;
         }
 
         .testimonial-content {
@@ -794,7 +799,7 @@
         }
 
         .footer-logo {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 20px;
